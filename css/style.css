@@ -1,9 +1,3 @@
-/*
-Author URI: http://webthemez.com/
-Note: 
-Licence under Creative Commons Attribution 3.0 
--------------------------------------------------------*/
-
 @charset "utf-8";
 @import url(http://fonts.googleapis.com/css?family=Raleway:800,700,400);
 @import url(http://fonts.googleapis.com/css?family=Signika:400,600);
@@ -58,6 +52,7 @@ body {
     font-weight: normal;
     color: white;
     margin: 0;
+    width: 100%;
 }
 
 h2 {
@@ -209,38 +204,16 @@ p {
 /* Top_content
 ---------------------------------*/
 
-/* Style the video: 100% width and height to cover the entire window */
-#videoDiv2 {min-width:100%; max-width:1200px; margin:auto; display:block; position: relative;} /* This has been changed */
-#video2{width:100%; height:auto } /* This has been changed */
-#videoMessage2 { position: absolute; top: 0; left: 0;
-display: flex;
-flex-direction: column; 
-justify-content: center;
-align-items: center; 
-width: 100%;
-height: 100%;}
-
-.headerColorText{
-    position: absolute;
-    inset: 0;
-    display: grid;
-    place-items: center;
-    background-color: #000;
-    color: #fff;
-    font-weight: 900;
-    font-size: 100px;
-    font-family: sans-serif;
-    /* Mix Blend Mode does the all magic */
-    mix-blend-mode: multiply;
-    user-select: none;
-  }
 
 .top_cont_outer {
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
 	background: url() top center no-repeat;
-	height: 650px;
+	height: 850px;
 }
-
 .hero_section {
     position: relative;
     padding-top: 100px;
@@ -271,17 +244,18 @@ height: 100%;}
 }
 
 .top_left_cont h2 {
-    font-size: 40px;
+    font-size: 200px;
     color: #FFF;
-    line-height: 52px;
+    line-height: 0;
     margin: 0 0 26px 0;
+    margin-top: -100px;
     font-family: 'Raleway', sans-serif;
     text-align: center;
 }
 
 .top_left_cont h2 strong {
     font-weight: 700;
-	color:#ED5441;
+	color:#ffffff;
 }
 
 .top_left_cont p {
@@ -341,15 +315,18 @@ a.read_more:hover {
 
 #service {
     padding: 60px 0px;
+    background: black;
 }
 #service h2{
-  color: white;
+  color: #fff;
 
 }
 .service_wrapper {
     padding: 40px 0 40px;
 }
 
+.service_section {
+}
 
 .service_block {
     text-align: center;
@@ -359,12 +336,9 @@ a.read_more:hover {
 }
 
 .service_icon {  
-    width: 280px;
-    height: 250px;
+    width: 150px;
+    height: auto;
     margin: 0px auto 25px; 
-    display: block;
-    justify-content: center;
-    align-items: center;
 }
 
  
@@ -372,11 +346,9 @@ a.read_more:hover {
 .service_icon span {
     background: transparent; 
     display: block;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-	border: 1px solid #fff;
+    height: 200px;
+    width: 200px;
+	border: 1px solid #fff
 }
 
 .service_icon i {
@@ -440,6 +412,7 @@ margin: 35px 0 15px;
 }
 
 .service-list-col1 i {
+    display:;
     color: #888;
     font-size: 19px;
     font-style: normal;
@@ -500,6 +473,7 @@ a.contact_btn:hover {
 
 #Portfolio {
     padding: 60px 0px;
+    
 }
 
 .Portfolio-nav {
@@ -690,13 +664,13 @@ background-size: auto 100%;
 background-position-y: 70px;
 }
 #about-us .read-more{
-	border: 1px solid #ED5441;
+	border: 1px solid #f6af55;
 	color: #1a1a1a;
 }
 
 #about-us .read-more:hover{
-	background-color: #e74c3c;
-	border: 1px solid #e74c3c;
+	background-color: #f6af55;
+	border: 1px solid #f6af55;
 	color: #fff;
 }
 .about-us-post-container{
@@ -738,7 +712,7 @@ background-position-y: 70px;
 	position: absolute;
 	font-family: FontAwesome;
 	font-size: 1.125em;
-	color: #ED5441;
+	color: #f6af55;
 	left: 0px;
 	top: 3px;
 }
@@ -1225,7 +1199,7 @@ margin-bottom: 5px;
 }
 
 .section-title h2 {
-    color: white;
+    color: #222222;
     font-family: 'Raleway', sans-serif;
     font-size: 34px;
     letter-spacing: -1px;
@@ -1664,7 +1638,7 @@ div.mc-image {
     bottom: 40px;
     padding: 10px 20px;
     text-indent: 0px;
-    border-radius: 0px;
+    moz-border-radius: 0px;
     -webkit-border-radius: 0px;
     border-radius: 0px;
     z-index: 1000;
@@ -1747,13 +1721,17 @@ height: 335px;
 .hero_section {
 position: relative;
 padding-top: 10px;
+display: flex;
+justify-content: center;
+align-items: center;
 }
 .top_left_cont {
 padding: 38px 0;
 }
 .top_left_cont h2 {
-font-size: 25px;
+font-size: 50px;
 color: #FFF;
+padding-top:200px;
 line-height: 39px;
 margin: 0 0 9px 0;
 }
@@ -1767,10 +1745,13 @@ margin-bottom:20px;
 font-size:26px;
 line-height:22px;
 }
+#service{
+    margin-top:250px;
+}
 .service_block h3 { 
 font-size: 16px;
 }
-service_block p {
+.service_block p {
 font-size: 14px; 
 margin: 0px;
 margin-bottom: 20px;
@@ -1784,7 +1765,7 @@ margin: 0 18px;
 .page_section.team{
 padding: 40px 0;
 }
- #clients {
+, #clients {
 padding: 40px 0;
 }
 .client_logos ul li {
@@ -1843,6 +1824,10 @@ padding: 10px 11px;
 }
 } 
 @media (max-width: 480px){ 
+
+    body{
+        min-width:100% !important;
+    }
 .navStyle {
 float: left;
 width: 100%; 
